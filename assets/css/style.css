@@ -8,6 +8,28 @@ h1 {
     color: green;
 }
 
+P {
+    color: red;
+    font-size: small;
+}
+
+.mdisplay {
+    text-align: center;
+    height: 2.5rem;
+    width: 3rem;
+    margin: 10px;
+
+    
+    
+}
+
+.button {
+    background-color: black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
 #screen {
     background-color: black;
     height: 5rem;
@@ -17,7 +39,7 @@ h1 {
 
 #main {
     background-color: grey;
-    height: 15rem;
+    height: 20rem;
     /*padding-top: 10px;*/
 
 }
@@ -29,19 +51,17 @@ h1 {
 }
 
 #tries {
-    background-color: black;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 10px;
+    background-color: darkgrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 4rem;
     /*display: inline-block;*/
     
 }
 
 #level {
     background-color: black;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin: 10px;
     /*display: inline-block;*/
 }
 
@@ -49,4 +69,7 @@ h1 {
     background-color: darkgrey;
     height: 70px;
     margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
