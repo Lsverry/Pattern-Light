@@ -60,6 +60,10 @@ P {
     
 }
 
+#tries i {
+    color: rgb(201, 13, 13);
+}
+
 #level {
     background-color: black;
     /*display: inline-block;*/
