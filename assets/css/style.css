@@ -5,8 +5,11 @@ body, html{
     height: 100%;
 }
 
-
 h1 {
+    color: green;
+}
+
+h2 {
     color: green;
 }
 
@@ -47,6 +50,10 @@ span:hover {
     box-sizing: border-box;
     border: 5px solid grey;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #main {
