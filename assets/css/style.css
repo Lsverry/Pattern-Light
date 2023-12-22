@@ -103,3 +103,18 @@ P {
 #b4 {
     background-color: yellow;
 }
+
+
+@media screen and (min-width: 768px) {
+    
+    .button {
+        height: 70px;
+        width: 70px;
+    }
+    
+    #buttons {
+        flex-direction: row;
+        height: 50%;
+    }
+
+}
