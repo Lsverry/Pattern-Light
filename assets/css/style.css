@@ -46,6 +46,7 @@ P {
     width: 100%;
     height: 50%;
     box-sizing: border-box;
+    padding: 0;
     /*padding-top: 10px;*/
 
 }
@@ -76,13 +77,29 @@ P {
 }
 
 #buttons {
+    border: 1px solid black;
     background-color: darkgrey;
-    /*height: 70px;*/
-    margin: 10px;
     padding: 10px;
+    margin: 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+}
+
+#b1 {
+    background-color: rgb(201, 13, 13);
+}
+
+#b2 {
+    background-color: blue;
+}
+
+#b3 {
+    background-color: green;
+}
+
+#b4 {
+    background-color: yellow;
 }
