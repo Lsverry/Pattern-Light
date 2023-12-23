@@ -18,11 +18,43 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementsByTagName("h2")[0].innerHTML = "Let's start!";
                 this.remove();
                 spanList[0].remove();
+                runGame();
             } else {
                 console.log("Start Game");
+                runGame();
             }
         })
     }
 })
 
 
+
+function runGame() {
+}
+
+function generateArray(difLevel) {
+
+}
+
+function checkArray(array1,array2) {
+
+}
+
+function addLevel() {
+
+}
+
+function lives() {
+}
+
+function gameOver() {
+
+}
+
+function displayPattern(array) {
+    
+}
+
+function reset() {
+
+}
