@@ -47,7 +47,9 @@ function checkArray(array1,array2) {
 }
 
 function addLevel() {
-
+    let level = document.getElementById("levelNumber");
+    level.innerHTML = parseInt(level.textContent)+1;
+    return parseInt(level.textContent);
 }
 
 function lives() {
