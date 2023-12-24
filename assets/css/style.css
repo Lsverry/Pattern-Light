@@ -101,6 +101,14 @@ span:hover {
     margin: 0;
 }
 
+#levelNumber {
+    color: red;
+    font-size: small;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
 #buttons {
     border: 1px solid black;
     background-color: darkgrey;
@@ -144,6 +152,10 @@ span:hover {
 
     #level P {
         color: red;
+        font-size: x-large;
+    }
+
+    #levelNumber {
         font-size: x-large;
     }
 

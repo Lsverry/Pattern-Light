@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function runGame() {
-    console.log(lives());
 }
 
 function generateArray(difLevel) {
