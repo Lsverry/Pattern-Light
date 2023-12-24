@@ -33,7 +33,13 @@ function runGame() {
 }
 
 function generateArray(difLevel) {
+    let array = [];
+    let dif = difLevel * 2 + 2;
 
+    for (let i = 1; i <= dif; i++) {
+        array.push(Math.floor(Math.random() * 4 + 1));
+    }
+    return array;
 }
 
 function checkArray(array1,array2) {
