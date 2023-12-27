@@ -39,6 +39,7 @@ function generateArray(difLevel) {
     for (let i = 1; i <= dif; i++) {
         array.push(Math.floor(Math.random() * 4 + 1));
     }
+    console.log(array);
     return array;
 }
 
@@ -71,8 +72,40 @@ function gameOver() {
 
 }
 
-function displayPattern(array) {
-    
+function displaySequence(array) {
+    /*let buttons = document.getElementsByClassName("button");*/
+    console.log("Running function");
+    let i = 0;
+    let rep1 = false;
+    let lastNumber;
+    let currentNumber;
+    let oneSecond = false;
+    function iteration() {
+        currentNumber = array[i];
+        if (rep1) {
+            document.getElementById(`b${array[i-1]}`).style.backgroundColor = "black";
+            lastNumber = array[i-1];
+
+        } else {
+            rep1 = true;
+        }
+        
+        if (i < array.length && lastNumber !== currentNumber) {
+            
+            document.getElementById(`b${array[i]}`).style.backgroundColor = "red";
+            i++;
+            setTimeout(iteration, 1000);
+        } else if (oneSecond && i < array.length) {
+            document.getElementById(`b${array[i]}`).style.backgroundColor = "red";
+            i++;
+            oneSecond = false;
+            setTimeout(iteration, 1000);
+        } else {
+            oneSecond = true;
+            setTimeout(iteration, 1000);
+        }
+    }
+    iteration();
 }
 
 function reset() {
