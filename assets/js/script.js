@@ -1,40 +1,64 @@
-
+let tries = 3;
+let userArray = [];
+let machineArray = [];
 
 document.addEventListener("DOMContentLoaded", function() {
     let spanList = document.getElementsByTagName("span");
-
+    let buttonList = document.getElementsByClassName("button");
     for (span of spanList) {
         span.addEventListener("click", function() {
             if (this.innerText === "Yes") {
                 console.log("Yes");
                 let h2 = document.getElementsByTagName("h2");
-                h2[0].innerHTML = "Repeat the light pattern in the correct order";
+                h2[0].innerHTML = "Repeat the sequence of lights in the correct order";
                 spanList[1].remove();
                 this.innerHTML = "Start Game"
 
                 
             } else if (this.innerText === "No") {
                 console.log("No");
-                document.getElementsByTagName("h2")[0].innerHTML = "Let's start!";
-                this.remove();
+                document.getElementsByTagName("h2")[0].innerHTML = "Click below to start the game";
+                this.innerHTML = "Start Game";
                 spanList[0].remove();
-                runGame();
             } else {
                 console.log("Start Game");
                 runGame();
             }
         })
     }
+
+    for (button of buttonList) {
+        button.addEventListener("click", function() {
+            if (this.id === "b1") {
+                userArray.push(1);
+                console.log(userArray);
+                this.style.backgroundColor = "red";
+            } else if (this.id === "b2") {
+                userArray.push(2);
+                console.log(userArray);
+                this.style.backgroundColor = "red";
+            } else if (this.id === "b3") {
+                userArray.push(3);
+                console.log(userArray);
+                this.style.backgroundColor = "red";
+            } else {
+                userArray.push(4);
+                console.log(userArray);
+                this.style.backgroundColor = "red";
+            }
+            setTimeout(revertBlack, 300);
+        })
+    }
 })
 
 
 
-function runGame() {
+function runGame() {    
 }
 
 function generateArray(difLevel) {
     let array = [];
-    let dif = difLevel * 2 + 2; //Add two numbers for each difficulty level.
+    let dif = difLevel + 3; 
 
     for (let i = 1; i <= dif; i++) {
         array.push(Math.floor(Math.random() * 4 + 1));
@@ -106,6 +130,13 @@ function displaySequence(array) {
         }
     }
     iteration();
+}
+
+function revertBlack() {
+    button = document.getElementsByClassName("button");
+    for (b of button) {
+        b.style.backgroundColor = "black";
+    }
 }
 
 function reset() {
