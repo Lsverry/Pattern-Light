@@ -1,6 +1,8 @@
+let difficultyLevel = 1;
 let tries = 3;
 let userArray = [];
 let machineArray = [];
+let sameArray = false;
 
 document.addEventListener("DOMContentLoaded", function() {
     let spanList = document.getElementsByTagName("span");
@@ -47,13 +49,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.style.backgroundColor = "red";
             }
             setTimeout(revertBlack, 300);
+            checkArray();
         })
     }
 })
 
 
 
-function runGame() {    
+function runGame() {
+    userArray = [];
+    machineArray = generateArray(difficultyLevel);
+    displaySequence(machineArray);
 }
 
 function generateArray(difLevel) {
@@ -67,14 +73,36 @@ function generateArray(difLevel) {
     return array;
 }
 
-function checkArray(array1,array2) {
+function checkArray() {
+    if (machineArray.length === userArray.length && machineArray.length >= 4) {
+        sameArray = true;
+        for (let i = 0; i < machineArray.length; i++) {
+            if (machineArray[i] !== userArray[i]) {
+                sameArray = false;
+                lives();
+                console.log("Not the same")
+                break;
+                
+            }
+        }
+    } else {
+        return console.log("Not ready");
+    }
 
+    if (sameArray) {
+        addLevel();
+        console.log("level up");
+    }
+
+    if (tries === 0) {
+        console.log("Game Over");
+    }
 }
 
 function addLevel() {
     let level = document.getElementById("levelNumber");
     level.innerHTML = parseInt(level.textContent)+1;
-    return parseInt(level.textContent);
+    difficultyLevel++;
 }
 
 function lives() {
@@ -89,7 +117,7 @@ function lives() {
         }
     }
 
-    return -1;
+    tries = tries-1;
 }
 
 function gameOver() {
