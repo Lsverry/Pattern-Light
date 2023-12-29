@@ -96,6 +96,7 @@ function checkArray() {
 
     if (tries === 0) {
         console.log("Game Over");
+        reset();
     }
 }
 
@@ -168,5 +169,13 @@ function revertBlack() {
 }
 
 function reset() {
+    lives = 3;
+    difficultyLevel = 1;
 
+    let iElements = document.getElementsByTagName("i");
+    for (y of iElements) {
+        y.style.color = "rgb(201, 13, 13)";
+    }
+
+    document.getElementById("levelNumber").innerHTML = "1";
 }
