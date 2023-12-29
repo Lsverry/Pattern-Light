@@ -1,3 +1,6 @@
+let spanList = document.getElementsByTagName("span");
+let buttonList = document.getElementsByClassName("button");
+let h2 = document.getElementsByTagName("h2")[0];
 let difficultyLevel = 1;
 let tries = 3;
 let userArray = [];
@@ -5,23 +8,23 @@ let machineArray = [];
 let sameArray = false;
 
 document.addEventListener("DOMContentLoaded", function() {
-    let spanList = document.getElementsByTagName("span");
-    let buttonList = document.getElementsByClassName("button");
     for (span of spanList) {
         span.addEventListener("click", function() {
             if (this.innerText === "Yes") {
                 console.log("Yes");
-                let h2 = document.getElementsByTagName("h2");
-                h2[0].innerHTML = "Repeat the sequence of lights in the correct order";
+                h2.innerHTML = "Repeat the sequence of lights in the correct order";
                 spanList[1].remove();
                 this.innerHTML = "Start Game"
 
                 
             } else if (this.innerText === "No") {
                 console.log("No");
-                document.getElementsByTagName("h2")[0].innerHTML = "Click below to start the game";
-                this.innerHTML = "Start Game";
-                spanList[0].remove();
+                h2.innerHTML = "Click below to start the game";
+                this.remove();
+                spanList[0].innerHTML = "Start Game";
+            } else if (this.innerText === "Play Again") {
+                reset();
+                runGame();
             } else {
                 console.log("Start Game");
                 runGame();
@@ -57,6 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function runGame() {
+    h2.innerHTML = "";
+    spanList[0].style.display = "none";
     userArray = [];
     machineArray = generateArray(difficultyLevel);
     displaySequence(machineArray);
@@ -78,8 +83,11 @@ function checkArray() {
         sameArray = true;
         for (let i = 0; i < machineArray.length; i++) {
             if (machineArray[i] !== userArray[i]) {
+                spanList[0].style.display = "inline";
+                spanList[0].innerHTML = "Try again";
                 sameArray = false;
                 lives();
+                h2.innerHTML = tries === 1 ? `Failure, you have ${tries} more life` : `Failure, you have ${tries} more lives`;
                 console.log("Not the same")
                 break;
                 
@@ -90,13 +98,17 @@ function checkArray() {
     }
 
     if (sameArray) {
+        h2.innerHTML = "Right! let's up the difficulty"
+        spanList[0].style.display = "inline";
+        spanList[0].innerHTML = "Continue";
         addLevel();
         console.log("level up");
     }
 
     if (tries === 0) {
         console.log("Game Over");
-        reset();
+        h2.innerHTML = "Game Over"
+        spanList[0].innerHTML = "Play Again";
     }
 }
 
@@ -121,12 +133,7 @@ function lives() {
     tries = tries-1;
 }
 
-function gameOver() {
-
-}
-
 function displaySequence(array) {
-    /*let buttons = document.getElementsByClassName("button");*/
     console.log("Running function");
     let i = 0;
     let rep1 = false;
@@ -169,7 +176,7 @@ function revertBlack() {
 }
 
 function reset() {
-    lives = 3;
+    tries = 3;
     difficultyLevel = 1;
 
     let iElements = document.getElementsByTagName("i");
