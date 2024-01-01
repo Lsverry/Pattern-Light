@@ -1,8 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 body, html{
+    font-family: 'VT323', monospace, sans-serif;
+    font-size: 19px;
     background-color: whitesmoke;
     padding: 0;
     margin: 0;
     height: 100%;
+    letter-spacing: 1px;
 }
 
 h1 {
@@ -88,6 +94,7 @@ span:hover {
 
 #tries i {
     color: rgb(201, 13, 13);
+    font-size: 16px;
 }
 
 #level {
@@ -97,14 +104,14 @@ span:hover {
 
 #level P {
     color: red;
-    font-size: small;
+    font-size: 20px;
     padding: 0;
     margin: 0;
 }
 
 #levelNumber {
     color: red;
-    font-size: small;
+    font-size: 20px;
     padding: 0;
     margin: 0;
     border: none;
@@ -123,6 +130,10 @@ span:hover {
 }
 
 @media screen and (min-width: 768px) {
+
+    body {
+        font-size: 23px;
+    }
     
     .button {
         height: 70px;
