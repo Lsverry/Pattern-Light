@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 userArray.push(2);
                 this.style.backgroundColor = "red";
             } else if (this.id === "b3") {
-                console.log(userArray);
+                userArray.push(3);
                 this.style.backgroundColor = "red";
             } else {
                 userArray.push(4);
