@@ -22,14 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
     for (span of spanList) {
         span.addEventListener("click", function() { //Apply an event listener to spans
             if (this.innerText === "Yes") {
-                console.log("Yes");
                 h2.innerHTML = "Repeat the sequence of lights in the correct order";
                 spanList[1].remove();
                 this.innerHTML = "Start Game"
 
                 
             } else if (this.innerText === "No") {
-                console.log("No");
                 h2.innerHTML = "Click below to start the game";
                 this.remove();
                 spanList[0].innerHTML = "Start Game";
@@ -75,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * Use the random array with the function that displays the sequence to the user.
 */
 function runGame() {
-    h2.innerHTML = "";
+    h2.innerHTML = "Wait";
     spanList[0].style.display = "none";
     userArray = [];
     machineArray = generateArray(difficultyLevel); //Create a random array for machineArray.
@@ -188,16 +186,17 @@ function displaySequence(array) {
             rep1 = true;
         }
         
-        if (i < array.length && lastNumber !== currentNumber) { //This if checks if the index is less than the length of the array and if the last value is different from the current value.
-            
+        if (array.length === i) {
+            h2.innerHTML = "Now it's your turn";
+        } else if (i < array.length && lastNumber !== currentNumber) { //This if checks if the index is less than the length of the array and if the last value is different from the current value. 
             document.getElementById(`b${array[i]}`).style.backgroundColor = "red"; //If so, use the index to change the colour of the respective div.
             i++; //Add 1 to the index value.
-            setTimeout(iteration, 1500);
+            setTimeout(iteration, 1000);
         } else if (oneSecond && i < array.length) { //If the variable oneSecond is true and the index is less than the length of the array it will enter this else if.
             document.getElementById(`b${array[i]}`).style.backgroundColor = "red"; //And it will change the colour of the current div.
             i++;
             oneSecond = false;
-            setTimeout(iteration, 1500);
+            setTimeout(iteration, 1000);
         } else { //If there are two equal values in a row, change the oneSecond variable to true, and rerun the iteration function.
             oneSecond = true;
             setTimeout(iteration, 1000);
