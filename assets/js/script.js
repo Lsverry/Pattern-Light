@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 userArray.push(4);
                 this.style.backgroundColor = "red";
             }
-            setTimeout(revertBlack, 300);
+            setTimeout(revertBlack, 500);
             checkArray();
         })
     }
@@ -187,12 +187,12 @@ function displaySequence(array) {
             
             document.getElementById(`b${array[i]}`).style.backgroundColor = "red"; //If so, use the index to change the colour of the respective div.
             i++; //Add 1 to the index value.
-            setTimeout(iteration, 1000);
+            setTimeout(iteration, 1500);
         } else if (oneSecond && i < array.length) { //If the variable oneSecond is true and the index is less than the length of the array it will enter this else if.
             document.getElementById(`b${array[i]}`).style.backgroundColor = "red"; //And it will change the colour of the current div.
             i++;
             oneSecond = false;
-            setTimeout(iteration, 1000);
+            setTimeout(iteration, 1500);
         } else { //If there are two equal values in a row, change the oneSecond variable to true, and rerun the iteration function.
             oneSecond = true;
             setTimeout(iteration, 1000);
