@@ -67,6 +67,12 @@ span:hover {
 #record {
     color: green;
     display: none;
+    font-size: 25px;
+}
+
+#h2p {
+    color: green;
+    font-size: 25px;
 }
 
 /*Styles for the div of the game screen*/

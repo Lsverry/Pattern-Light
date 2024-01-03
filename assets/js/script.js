@@ -8,7 +8,7 @@ let tries = 3;
 let userArray = [];
 let machineArray = [];
 let sameArray = false;
-
+let h2paragraph = document.getElementById("h2p");
 //Event listener inspired by Code Institute's Love Maths project.
 /**Event listener to be executed when the dom is loaded.
  * Allows for interaction with the spans and for them to respond appropriately.
@@ -22,11 +22,13 @@ document.addEventListener("DOMContentLoaded", function() {
     for (span of spanList) {
         span.addEventListener("click", function() { //Apply an event listener to spans
             if (this.innerText === "Yes") {
-                h2.innerHTML = "Repeat the sequence of lights in the correct order";
+                h2.innerHTML = "";
+                h2paragraph.innerHTML = "Remember the secuence and repeat it in the correct order";
                 spanList[1].remove();
-                this.innerHTML = "Start Game"
-
-                
+                this.innerHTML = "Next";
+            } else if (this.innerText === "Next") {
+                h2paragraph.innerHTML = "Wait for the sequence to finish before starting";
+                this.innerHTML = "Start Game";
             } else if (this.innerText === "No") {
                 h2.innerHTML = "Click below to start the game";
                 this.remove();
@@ -73,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * Use the random array with the function that displays the sequence to the user.
 */
 function runGame() {
+    h2paragraph.innerHTML = "";
     h2.innerHTML = "Wait";
     spanList[0].style.display = "none";
     userArray = [];
