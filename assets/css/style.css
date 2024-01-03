@@ -15,7 +15,6 @@ body, html{
 /*Styles for h1*/
 h1 {
     color: green;
-    flex-basis: 20%;
     
 }
 
@@ -57,6 +56,17 @@ span:hover {
     border-radius: 50%;
     height: 50px;
     width: 50px;
+}
+
+/**/
+#h1Div {
+    flex-basis: 35%;
+}
+
+/**/
+#record {
+    color: green;
+    display: none;
 }
 
 /*Styles for the div of the game screen*/

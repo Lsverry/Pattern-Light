@@ -3,6 +3,7 @@ let spanList = document.getElementsByTagName("span");
 let buttonList = document.getElementsByClassName("button");
 let h2 = document.getElementsByTagName("h2")[0];
 let difficultyLevel = 1;
+let lastDifficulty = 1;
 let tries = 3;
 let userArray = [];
 let machineArray = [];
@@ -33,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.remove();
                 spanList[0].innerHTML = "Start Game";
             } else if (this.innerText === "Play Again") {
+                let lastRecord = document.getElementById("record");
+                lastRecord.style.display = "inline";
+                lastDifficulty = difficultyLevel > lastDifficulty ? difficultyLevel : lastDifficulty;
+                lastRecord.innerHTML = `Last level: ${lastDifficulty}`;
                 reset();
                 runGame();
             } else {
