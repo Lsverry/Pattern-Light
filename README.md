@@ -1,27 +1,32 @@
 # PatternLight
-PatternLight is a memory game dedicated to people who want to train and keep their memory healthy.
-
-The game offers users a challenge that gets more difficult as they level up and three chances before the game is over.
+PatternLight is a memorisation game which has a screen, a difficulty level indicator, an attempt indicator and 4 buttons which will light up randomly. The main objective is to wait for the sequence to finish, memorise it and then repeat it by clicking on the buttons.
+![PatternLight in different screen sizes](assets/images/PatternLight%20in%20different%20screen%20sizes.png)
 
 ## Features
 - Information screen:
     - Displays the name of the game at the top.
     - It offers the user the opportunity to watch a tutorial or start the game.
     - Displays feedback depending on whether the user hits, misses or has to start over.
+    - Displays the highest level reached once you lose.
+    ![Information screen](assets/images/Main%20screen.png)
 
 - Mini level display:
     - Displays the current level of difficulty.
     - Starts at level 1 by default.
+    ![Mini level display](assets/images/Mini%20level%20display.png)
 
-- Lives:
+- Tries Indicator:
     - Three hearts represent the chances you have before the game ends.
     - Every failure will turn off a heart.
     - If the game ends, the user will get the three hearts back.
+    ![Tries Indicator](assets/images/Tries%20indicator.png)
+
 
 - Buttons: 
     - Four interactive buttons.
     - Have a responsive design which adapts to different screen sizes to make the best use of space. 
     - They also show the sequence that the user must follow to advance by means of red lights.
+    ![Buttons](assets/images/Buttons.png)
 
 ### Testing
 - I have confirmed that the design is responsive and adapts to different screen sizes.
@@ -33,20 +38,47 @@ The game offers users a challenge that gets more difficult as they level up and 
 
 ### Validator Testing
 - HTML
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Flsverry.github.io%2FPattern-Light%2F)
 
 - CSS
+    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flsverry.github.io%2FPattern-Light%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 - JavaScript
+    - No errors were found when passing through [JSHint JavaScript Validator](https://jshint.com/)
 
 - Accessibility
+    - I have confirmed that this project is responsive, adapts well to all standard screen sizes and there is sufficient contrast between background and text using the DevTools device toolbar: 
+    ![LightHouse Test](assets/images/Lighthouse.png)
+
+
+## Bugs
+##### Solved bugs:
+- When I deployed my project on GitHub pages, I discovered that the game didn't work properly (a button was not responding).
+- I discovered that the problem was because I accidentally deleted line 58 of code while testing the program.
+- I simply added the line again, which allowed to save the value of the button and the problem was solved.
+![Line 58](assets/images/Line%2058.png)
+- I also discovered that the function that displayed the sequence to the user behaved erratically (sometimes it was not possible to see the whole sequence).
+- I discovered that the error was due to the inner function of displaySequence() calling itself infinitely.
+- Solve this by placing an if statement to end the recursive call of the function when it reaches the end of the sequence.
+![if statement](assets/images/if%20statement%20.png)
 
 ### Unfixed bugs
 No unfixed bugs
 
 ## Deployment
+- This game was deployed on GitHub pages, here are the steps followed for deployment:
+    - In the game repository, go to settings.
+    - Once in settings, scroll down to the "Code and automation" section and click on the last option "Pages".
+    - In "Source" select "deploy from a branch".
+    - And below select the branch that contains your website and click on "Save".
+    - Then a URL will be generated after a few minutes.
+    The link to the game can be found here - [PatternLight](https://lsverry.github.io/Pattern-Light/)
 
 ## Credits
 
 ### Content
+- The principle of the code for the first function to make the buttons responsive was taken from the [Code Institute Love Maths project](https://github.com/Code-Institute-Org/love-maths)
 
 ### Media
+- The icons for the attempt indicator were taken from [Font Awesome](https://fontawesome.com/)
+- The favicon icon was taken from [Font Awesome](https://fontawesome.com/)

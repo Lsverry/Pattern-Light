@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 runGame();
             }
-        })
+        });
     }
 
     for (button of buttonList) {
@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             setTimeout(revertBlack, 500);
             checkArray();
-        })
+        });
     }
-})
+});
 
 
 /**Function that initiates the sequence of lights.
@@ -126,14 +126,14 @@ function checkArray() {
     }
 
     if (sameArray) {
-        h2.innerHTML = "Right! let's up the difficulty"
+        h2.innerHTML = "Right! let's up the difficulty";
         spanList[0].style.display = "inline";
         spanList[0].innerHTML = "Continue";
         addLevel();
     }
 
     if (tries === 0) {
-        h2.innerHTML = "Game Over"
+        h2.innerHTML = "Game Over";
         spanList[0].innerHTML = "Play Again";
     }
 }

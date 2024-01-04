@@ -25,6 +25,7 @@ h2 {
 
 /*Styles for spans*/
 span {
+    font-weight: bold;
     border: 1px solid green;
     padding: 5px;
     margin: 5px;
@@ -147,6 +148,7 @@ span:hover {
     padding: 0;
     margin: 0;
     border: none;
+    font-weight: normal;
 }
 
 /*Styles for the div containing the buttons*/
