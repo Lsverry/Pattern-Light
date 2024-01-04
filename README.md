@@ -24,7 +24,7 @@ The game is aimed at those who want to train and take care of their memory throu
     - Three hearts represent the chances you have before the game ends.
     - Every failure will turn off a heart.
     - If the game ends, the user will get the three hearts back.
-    ![Tries Indicator](assets/images/tries%20indicator.png)
+    ![tries Indicator](assets/images/tries%20indicator.png)
 
 
 - Buttons: 
@@ -32,7 +32,7 @@ The game is aimed at those who want to train and take care of their memory throu
     - Have a responsive design which adapts to different screen sizes to make the best use of space. 
     - They also show the sequence that the user must follow to advance by means of red lights.
     - The order in which the buttons light up is random, making each game different.
-    ![Buttons](assets/images/buttons.png)
+    ![buttons](assets/images/buttons.png)
 #### Existing Features
 - With enough time I would like to adjust and add a function that recovers a try with each success, so that the difficulty of the game is reduced.
 ### Testing
