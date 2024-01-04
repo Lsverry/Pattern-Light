@@ -1,33 +1,40 @@
 # PatternLight
 PatternLight is a memorisation game which has a screen, a difficulty level indicator, an attempt indicator and 4 buttons which will light up randomly. The main objective is to wait for the sequence to finish, memorise it and then repeat it by clicking on the buttons.
+
+The game is aimed at those who want to train and take care of their memory through a challenge that gets more difficult as you level up.
 ![PatternLight in different screen sizes](assets/images/PatternLight%20in%20different%20screen%20sizes.png)
 
 ## Features
+#### Existing Features
 - Information screen:
     - Displays the name of the game at the top.
     - It offers the user the opportunity to watch a tutorial or start the game.
     - Displays feedback depending on whether the user hits, misses or has to start over.
+    - Indicates when the sequence has been completed for the user to repeat.
     - Displays the highest level reached once you lose.
-    ![Information screen](assets/images/Main%20screen.png)
+    ![Information screen](assets/images/Main%20screen%202.png)
 
 - Mini level display:
     - Displays the current level of difficulty.
     - Starts at level 1 by default.
+    - There is no final level, the goal is to reach the highest level before losing.
     ![Mini level display](assets/images/Mini%20level%20display.png)
 
 - Tries Indicator:
     - Three hearts represent the chances you have before the game ends.
     - Every failure will turn off a heart.
     - If the game ends, the user will get the three hearts back.
-    ![Tries Indicator](assets/images/Tries%20indicator.png)
+    ![Tries Indicator](assets/images/tries%20indicator.png)
 
 
 - Buttons: 
     - Four interactive buttons.
     - Have a responsive design which adapts to different screen sizes to make the best use of space. 
     - They also show the sequence that the user must follow to advance by means of red lights.
-    ![Buttons](assets/images/Buttons.png)
-
+    - The order in which the buttons light up is random, making each game different.
+    ![Buttons](assets/images/buttons.png)
+#### Existing Features
+- With enough time I would like to adjust and add a function that recovers a try with each success, so that the difficulty of the game is reduced.
 ### Testing
 - I have confirmed that the design is responsive and adapts to different screen sizes.
 - I have confirmed that the game displays the sequence that the user must follow correctly.
