@@ -58,18 +58,19 @@ span:hover {
     width: 50px;
 }
 
-/**/
+/*Div for h1*/
 #h1Div {
     flex-basis: 35%;
 }
 
-/**/
+/*Paragraph to contain the last level reached*/
 #record {
     color: green;
     display: none;
     font-size: 25px;
 }
 
+/*Paragraph to explain the tutorial with javaScript*/
 #h2p {
     color: green;
     font-size: 25px;
@@ -163,7 +164,7 @@ span:hover {
     width: auto;
 }
 
-/*Styles for larger screens*/
+/*Styles for tablets*/
 @media screen and (min-width: 768px) {
 
     body {
@@ -191,6 +192,38 @@ span:hover {
 
     #tries i {
         font-size: 25px;
+    }
+
+    
+}
+
+/*Styles for larger screens*/
+@media screen and (min-width: 1024px) {
+
+    body {
+        font-size: 25px;
+    }
+    
+    .button {
+        height: 120px;
+        width: 120px;
+    }
+    
+    #buttons {
+        height: 70%;
+    }
+
+    #level P {
+        color: red;
+        font-size:xx-large
+    }
+
+    #levelNumber {
+        font-size: xx-large;
+    }
+
+    #tries i {
+        font-size: 30px;
     }
 
     

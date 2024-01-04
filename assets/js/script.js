@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
         span.addEventListener("click", function() { //Apply an event listener to spans
             if (this.innerText === "Yes") {
                 h2.innerHTML = "";
-                h2paragraph.innerHTML = "Remember the secuence and repeat it in the correct order";
+                h2paragraph.innerHTML = "Pay attention to the buttons below and repeat the sequence";
                 spanList[1].remove();
                 this.innerHTML = "Next";
             } else if (this.innerText === "Next") {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 let lastRecord = document.getElementById("record");
                 lastRecord.style.display = "inline";
                 lastDifficulty = difficultyLevel > lastDifficulty ? difficultyLevel : lastDifficulty;
-                lastRecord.innerHTML = `Last level: ${lastDifficulty}`;
+                lastRecord.innerHTML = `Highest level: ${lastDifficulty}`;
                 reset();
                 runGame();
             } else {
