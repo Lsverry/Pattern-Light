@@ -33,7 +33,7 @@ The game is aimed at those who want to train and take care of their memory throu
     - They also show the sequence that the user must follow to advance by means of red lights.
     - The order in which the buttons light up is random, making each game different.
     ![buttons](assets/images/b.png)
-#### Existing Features
+#### Features Left to implement
 - With enough time I would like to adjust and add a function that recovers a try with each success, so that the difficulty of the game is reduced.
 ### Testing
 - I have confirmed that the design is responsive and adapts to different screen sizes.
