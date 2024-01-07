@@ -11,9 +11,9 @@ let sameArray = false;
 let h2paragraph = document.getElementById("h2p");
 let colors = {
     1 : "red",
-    2 : "yellow",
-    3 : "lawngreen",
-    4 : "cyan"
+    2 : "gold",
+    3 : "lime",
+    4 : "deepskyblue"
 }
 let colorsOriginal = {
     1 : "rgba(255, 0, 0, 0.3)",
@@ -65,13 +65,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.style.backgroundColor = "red";
             } else if (this.id === "b2") {
                 userArray.push(2);
-                this.style.backgroundColor = "yellow";
+                this.style.backgroundColor = "gold";
             } else if (this.id === "b3") {
                 userArray.push(3);
-                this.style.backgroundColor = "lawngreen";
+                this.style.backgroundColor = "lime";
             } else {
                 userArray.push(4);
-                this.style.backgroundColor = "cyan";
+                this.style.backgroundColor = "deepskyblue";
             }
             setTimeout(revertColors, 500);
             checkArray();
