@@ -145,7 +145,7 @@ function checkArray() {
     }
 
     if (sameArray) {
-        h2.innerHTML = "Right! let's up the difficulty";
+        h2.innerHTML = "Right! let's raise the difficulty";
         spanList[0].style.display = "inline";
         spanList[0].innerHTML = "Continue";
         addLevel();
