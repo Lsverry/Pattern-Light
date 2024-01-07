@@ -220,7 +220,7 @@ function displaySequence(array) {
     iteration();
 }
 
-/**This function changes any button the user presses to black.
+/**This function returns the original colour to the button that has been pressed by the user.
 */
 function revertColors() {
     i = 1;
