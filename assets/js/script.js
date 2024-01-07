@@ -60,20 +60,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (button of buttonList) {
         button.addEventListener("click", function() {
+            let prevColor;
             if (this.id === "b1") {
                 userArray.push(1);
+                prevColor = 1;
                 this.style.backgroundColor = "red";
             } else if (this.id === "b2") {
                 userArray.push(2);
+                prevColor = 2;
                 this.style.backgroundColor = "gold";
             } else if (this.id === "b3") {
                 userArray.push(3);
+                prevColor = 3;
                 this.style.backgroundColor = "lime";
             } else {
                 userArray.push(4);
+                prevColor = 4;
                 this.style.backgroundColor = "cyan";
             }
-            setTimeout(revertColors, 500);
+            setTimeout(function() {
+                revertColors(prevColor);
+            }, 500);
             checkArray();
         });
     }
@@ -222,12 +229,9 @@ function displaySequence(array) {
 
 /**This function returns the original colour to the button that has been pressed by the user.
 */
-function revertColors() {
-    i = 1;
-    for (b of buttonList) {
-        b.style.backgroundColor = colorsOriginal[i];
-        i++
-    }
+function revertColors(id) {
+    let button = document.getElementById(`b${id}`);
+    button.style.backgroundColor = colorsOriginal[id];
 }
 
 /**Function in charge of restoring lives 3 and level to 1.
