@@ -30,16 +30,16 @@ The game is aimed at those who want to train and take care of their memory throu
 - Buttons: 
     - Four interactive buttons.
     - Have a responsive design which adapts to different screen sizes to make the best use of space. 
-    - They also show the sequence that the user must follow to advance by means of red lights.
+    - They also show the sequence the user must follow to advance by means of coloured lights.
     - The order in which the buttons light up is random, making each game different.
-    ![buttons](assets/images/b.png)
+    ![buttons](assets/images/buttons3.png)
 #### Features Left to implement
 - With enough time I would like to adjust and add a function that recovers a try with each success, so that the difficulty of the game is reduced.
 ### Testing
 - I have confirmed that the design is responsive and adapts to different screen sizes.
 - I have confirmed that the game displays the sequence that the user must follow correctly.
 - I have confirmed that the main screen displays user feedback in response to their actions correctly.
-- I have found that each success raises one level of difficulty appropriately. 
+- I have confirmed that each success raises one difficulty level appropriately. 
 - Lives are reduced appropriately each time a failure is made.
 - I have tested the game in several browsers such as Edge, Chrome, Safari and Firefox to make sure it is compatible and works fine in all of them.
 
@@ -55,7 +55,7 @@ The game is aimed at those who want to train and take care of their memory throu
 
 - Accessibility
     - I have confirmed that this project is responsive, adapts well to all standard screen sizes and there is sufficient contrast between background and text using the DevTools device toolbar: 
-    ![LightHouse Test](assets/images/Lighthouse.png)
+    ![LightHouse Test](assets/images/LightHouse2.png)
 
 
 ## Bugs

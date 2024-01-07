@@ -59,6 +59,23 @@ span:hover {
     width: 50px;
 }
 
+/*Styles for each button*/
+#b1 {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+#b2 {
+    background-color: rgba(229, 255, 0, 0.3);
+}
+
+#b3 {
+    background-color: rgba(0, 255, 34, 0.3);
+}
+
+#b4 {
+    background-color: rgba(0, 89, 255, 0.3);
+}
+
 /*Div for h1*/
 #h1Div {
     flex-basis: 35%;

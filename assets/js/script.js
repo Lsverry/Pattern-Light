@@ -9,6 +9,18 @@ let userArray = [];
 let machineArray = [];
 let sameArray = false;
 let h2paragraph = document.getElementById("h2p");
+let colors = {
+    1 : "red",
+    2 : "yellow",
+    3 : "lawngreen",
+    4 : "cyan"
+}
+let colorsOriginal = {
+    1 : "rgba(255, 0, 0, 0.3)",
+    2 : "rgba(229, 255, 0, 0.3",
+    3 : "rgba(0, 255, 34, 0.3)",
+    4 : "rgba(0, 89, 255, 0.3)"
+}
 //Event listener inspired by Code Institute's Love Maths project.
 /**Event listener to be executed when the dom is loaded.
  * Allows for interaction with the spans and for them to respond appropriately.
@@ -53,15 +65,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.style.backgroundColor = "red";
             } else if (this.id === "b2") {
                 userArray.push(2);
-                this.style.backgroundColor = "red";
+                this.style.backgroundColor = "yellow";
             } else if (this.id === "b3") {
                 userArray.push(3);
-                this.style.backgroundColor = "red";
+                this.style.backgroundColor = "lawngreen";
             } else {
                 userArray.push(4);
-                this.style.backgroundColor = "red";
+                this.style.backgroundColor = "cyan";
             }
-            setTimeout(revertBlack, 500);
+            setTimeout(revertColors, 500);
             checkArray();
         });
     }
@@ -183,7 +195,7 @@ function displaySequence(array) {
     function iteration() {
         currentNumber = array[i];
         if (rep1) { //This if takes care of changing the colour of the previous div, after the iteration function has been executed once.
-            document.getElementById(`b${array[i-1]}`).style.backgroundColor = "black";
+            document.getElementById(`b${array[i-1]}`).style.backgroundColor = colorsOriginal[array[i-1]];
             lastNumber = array[i-1]; //Save the previous value to make a check with the current value.
         } else {
             rep1 = true;
@@ -192,11 +204,11 @@ function displaySequence(array) {
         if (array.length === i) {
             h2.innerHTML = "Now it's your turn";
         } else if (i < array.length && lastNumber !== currentNumber) { //This if checks if the index is less than the length of the array and if the last value is different from the current value. 
-            document.getElementById(`b${array[i]}`).style.backgroundColor = "red"; //If so, use the index to change the colour of the respective div.
+            document.getElementById(`b${array[i]}`).style.backgroundColor = colors[array[i]]; //If so, use the index to change the colour of the respective div.
             i++; //Add 1 to the index value.
             setTimeout(iteration, 1000);
         } else if (oneSecond && i < array.length) { //If the variable oneSecond is true and the index is less than the length of the array it will enter this else if.
-            document.getElementById(`b${array[i]}`).style.backgroundColor = "red"; //And it will change the colour of the current div.
+            document.getElementById(`b${array[i]}`).style.backgroundColor = colors[array[i]]; //And it will change the colour of the current div.
             i++;
             oneSecond = false;
             setTimeout(iteration, 1000);
@@ -210,10 +222,11 @@ function displaySequence(array) {
 
 /**This function changes any button the user presses to black.
 */
-function revertBlack() {
-    button = document.getElementsByClassName("button");
-    for (b of button) {
-        b.style.backgroundColor = "black";
+function revertColors() {
+    i = 1;
+    for (b of buttonList) {
+        b.style.backgroundColor = colorsOriginal[i];
+        i++
     }
 }
 
