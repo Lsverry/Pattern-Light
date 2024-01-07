@@ -13,7 +13,7 @@ let colors = {
     1 : "red",
     2 : "gold",
     3 : "lime",
-    4 : "deepskyblue"
+    4 : "cyan"
 }
 let colorsOriginal = {
     1 : "rgba(255, 0, 0, 0.3)",
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 this.style.backgroundColor = "lime";
             } else {
                 userArray.push(4);
-                this.style.backgroundColor = "deepskyblue";
+                this.style.backgroundColor = "cyan";
             }
             setTimeout(revertColors, 500);
             checkArray();
