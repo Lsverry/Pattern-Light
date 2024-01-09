@@ -2,7 +2,7 @@
 PatternLight is a memorisation game which has a screen, a difficulty level indicator, an attempt indicator and 4 buttons which will light up randomly. The main objective is to wait for the sequence to finish, memorise it and then repeat it by clicking on the buttons.
 
 The game is aimed at those who want to train and take care of their memory through a challenge that gets more difficult as you level up.
-![PatternLight in different screen sizes](assets/images/PatternLight%20in%20different%20screen%20sizes%202.png)
+![PatternLight in different screen sizes](assets/images/PatternLight%20in%20different%20screen%20sizes%203.png)
 
 ## Features
 #### Existing Features
