@@ -14,13 +14,13 @@ let colors = {
     2 : "gold",
     3 : "lime",
     4 : "cyan"
-}
+};
 let colorsOriginal = {
     1 : "rgba(255, 0, 0, 0.3)",
     2 : "rgba(255, 215, 0, 0.3",
     3 : "rgba(0, 255, 34, 0.3)",
-    4 : "rgba(0, 89, 255, 0.3)"
-}
+    4 : "rgba(0, 195, 255, 0.3)"
+};
 //Event listener inspired by Code Institute's Love Maths project.
 /**Event listener to be executed when the dom is loaded.
  * Allows for interaction with the spans and for them to respond appropriately.
